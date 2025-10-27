@@ -1,0 +1,432 @@
+/* ---------------- VARIÁVEIS DE COR ---------------- */
+:root {
+  --primary-dark: #0e1116;
+  --secondary-dark: #1a1f2b;
+  --accent: #00c896;
+  --text-light: #f5f6fa;
+  --text-secondary: #a0a8b8;
+
+  /* Tema escuro padrão */
+  --bg-color: #0a0a0a;
+  --text-color: #ffffff;
+  --card-bg: #121212;
+}
+
+/* Tema claro */
+.light-theme {
+  --bg-color: #f7f7f7;
+  --text-color: #1a1a1a;
+  --card-bg: #ffffff;
+  --accent: #0077ff;
+}
+
+/* ---------------- RESET BÁSICO ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------- BASE ---------------- */
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.4s ease, color 0.4s ease;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================================
+   CABEÇALHO
+========================================================== */
+.header {
+  background: var(--secondary-dark);
+  padding: 15px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: background 0.4s ease;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo i {
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.logo p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* ---------------- NAVEGAÇÃO ---------------- */
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+/* Botão WhatsApp no header */
+.btn-whatsapp {
+  background-color: #25d366;
+  color: #fff !important;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background-color: #128c7e;
+}
+
+/* ==========================================================
+   BOTÕES GERAIS
+========================================================== */
+.btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--primary-dark);
+  border: 2px solid var(--accent);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--accent);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.btn-secondary:hover {
+  background: var(--accent);
+  color: var(--primary-dark);
+}
+
+/* ==========================================================
+   SEÇÃO HERO (INICIAL)
+========================================================== */
+.hero {
+  padding: 80px 0;
+}
+
+.hero .container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 2;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Bloco de serviço rápido */
+.quick-service {
+  flex: 1;
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 8px;
+  border-left: 3px solid var(--accent);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.4s ease;
+}
+
+.service-tag {
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.quick-service h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.quick-service p {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.btn-clean {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 10px 20px;
+}
+
+.btn-clean:hover {
+  background: var(--accent);
+  color: var(--primary-dark);
+}
+
+/* ==========================================================
+   SEÇÃO DE SERVIÇOS
+========================================================== */
+.services {
+  padding: 50px 0 80px 0;
+}
+
+.services h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  border-top-color: var(--accent);
+}
+
+.service-card i {
+  font-size: 1.8rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.service-card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.btn-whatsapp-card {
+  text-decoration: none;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.btn-whatsapp-card:hover {
+  background: var(--accent);
+  color: var(--primary-dark);
+}
+
+/* ==========================================================
+   BOTÃO DE TEMA CLARO/ESCURO
+========================================================== */
+#theme-toggle {
+   position: fixed;
+  top: 5.5rem; 
+  right: 1rem;
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s, transform 0.2s;
+  z-index: 999;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
+  background: var(--accent);
+  color: var(--primary-dark);
+}
+
+/* ==========================================================
+   CANVAS DE PARTÍCULAS (FUNDO)
+========================================================== */
+#particles-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: transparent;
+}
+
+/* ==========================================================
+   RODAPÉ
+========================================================== */
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  background: var(--secondary-dark);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  transition: background 0.4s ease;
+}
+
+/* ==========================================================
+   MENU MOBILE
+========================================================== */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.nav.active {
+  right: 0;
+}
+
+.menu-toggle.active i {
+  transform: rotate(90deg);
+}
+
+/* ==========================================================
+   RESPONSIVIDADE
+========================================================== */
+@media (max-width: 900px) {
+  .hero .container {
+    flex-direction: column;
+  }
+
+  .hero-content h2 {
+    font-size: 2.4rem;
+  }
+
+  .quick-service {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    z-index: 1001;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: var(--secondary-dark);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.4s ease;
+    z-index: 1000;
+  }
+
+  .nav a {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

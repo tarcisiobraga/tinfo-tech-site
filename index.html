@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>T-INFO TECH - Seu Computador Rápido e Seguro</title>
+
+  <!-- Fontes e Ícones -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="Imagens/computador.png" type="image/x-icon">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Fundo animado -->
+  <canvas id="particles-bg"></canvas>
+
+  <!-- Botão de tema claro/escuro -->
+  <button id="theme-toggle" aria-label="Alternar tema">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="container">
+      <!-- Logo -->
+      <div class="logo">
+        <i class="fas fa-laptop-code"></i>
+        <div>
+          <h1>T-INFO TECH</h1>
+          <p>Limpeza • Instalação • Upgrade</p>
+        </div>
+      </div>
+
+      <!-- Botão menu mobile -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Navegação -->
+      <nav class="nav" id="nav-menu">
+        <a href="#servicos" class="nav-link">Serviços</a>
+        <a href="https://api.whatsapp.com/send?phone=5581993780205" target="_blank" class="btn-whatsapp">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <!-- Texto principal -->
+        <div class="hero-content scroll">
+          <h2>Seu computador mais rápido e <span class="highlight">seguro</span>.</h2>
+          <p>Agende limpeza, instalação de sistemas ou upgrade com atendimento profissional e garantia de serviço. Atendimento local e envio/retirada. Pagamento via Pix, dinheiro ou cartão.</p>
+
+          <div class="hero-actions">
+            <a href="https://api.whatsapp.com/send?phone=5581993780205&text=Olá! Gostaria de agendar um serviço." class="btn btn-primary">
+              <i class="fas fa-calendar-check"></i> Agendar Serviço
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=5581993780205&text=Olá! Gostaria de pedir um orçamento." class="btn btn-secondary">
+              <i class="fas fa-clipboard-list"></i> Pedir Orçamento
+            </a>
+          </div>
+        </div>
+
+        <!-- Destaque lateral -->
+        <div class="quick-service scroll">
+          <p class="service-tag">Serviço Rápido</p>
+          <h3>Limpeza & Otimização</h3>
+          <p>Remoção de poeira, troca de pasta térmica e ajustes de desempenho.</p>
+          <a href="https://api.whatsapp.com/send?phone=5581993780205&text=Olá! Quero agendar uma Limpeza e Otimização." class="btn btn-clean">
+            <i class="fas fa-broom"></i> Agendar Limpeza
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lista de serviços -->
+    <section id="servicos" class="services">
+      <div class="container">
+        <h3 class="scroll">Nossos Serviços</h3>
+
+        <div class="services-grid">
+          <!-- Card de serviço -->
+          <div class="service-card scroll">
+            <i class="fas fa-broom icon"></i>
+            <h4>Limpeza interna e externa</h4>
+            <p>Limpeza profunda e troca de pasta térmica.</p>
+           
+        </a>
+            </a>
+          </div>
+
+          <div class="service-card scroll">
+            <i class="fas fa-tools icon"></i>
+            <h4>Instalação de sistemas</h4>
+            <p>Formatação, instalação e drivers atualizados.</p>
+            
+        </a>
+            </a>
+          </div>
+
+          <div class="service-card scroll">
+            <i class="fas fa-bolt icon"></i>
+            <h4>Upgrade SSD/RAM</h4>
+            <p>Substituição de HD, instalação de memória e otimização.</p>
+           
+        </a>
+            </a>
+          </div>
+
+          <div class="service-card scroll">
+            <i class="fas fa-search-dollar icon"></i>
+            <h4>Diagnóstico e reparo</h4>
+            <p>Verificação de falhas e orçamento transparente.</p>
+           
+        </a>
+          </div>
+
+          <div class="service-card scroll">
+            <i class="fas fa-lock icon"></i>
+            <h4>Segurança e backup</h4>
+            <p>Antivírus, remoção de malware e backup seguro.</p>
+            
+        </a>
+          </div>
+
+          <div class="service-card scroll">
+            <i class="fas fa-shipping-fast icon"></i>
+            <h4>Retirada / Entrega</h4>
+            <p>Serviço de coleta e entrega (sujeito a disponibilidade).</p>
+           
+        </a>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>© 2025 T-INFO TECH • Todos os direitos reservados</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
